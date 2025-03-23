@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!-- Bu belge HTML5 standardını kullanıyor -->
+<html lang="tr">
+  <head>
+    <!-- Türkçe karakter desteği -->
+    <meta charset="UTF-8" />
+    <!-- Mobil uyumlu görünüm ayarları -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Yerel CSS dosyamızı projeye dahil ediyoruz -->
+    <link rel="stylesheet" href="./style.css" />
+    
+    <!-- Bootstrap CSS framework'ü dahil ediliyor (hızlı tasarım için) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    
+    <!-- Google Fonts üzerinden yazı tipleri çekiliyor -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Sayfa başlığı -->
+    <title>Ayk Spor Salonu</title>
+  </head>
+  <body>
+    <!-- Üst menü (navigasyon) bölümü -->
+    <header>
+      <nav class="navbar-container">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="./images/logo.png" alt="Ayk Logo" />
+        </div>
+
+        <!-- Menü butonu (mobil cihazlar için) -->
+        <input type="checkbox" class="menu-btn" id="menu-btn" />
+        <label for="menu-btn" class="menu-icon">
+          <i class="fa-solid fa-bars menu-hmbgr"></i>
+        </label>
+
+        <!-- Menü bağlantıları -->
+        <div class="bar">
+          <a href="#home">Ana Sayfa</a>
+          <a href="#classes">Dersler</a>
+          <a href="#trainer">Eğitmenler</a>
+          <a href="#review">Yorumlar</a>
+          <a href="#contact">İletişim</a>
+          <button>
+            <a href="#joinus"><p>Bize Katıl</p></a>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Ana giriş bölümü (hero alanı) -->
+    <section id="home" class="home">
+      <div class="home-container">
+        <div class="container">
+          <!-- Güçlü yazısı -->
+          <h6 class="power"><p>GÜÇLÜ</p></h6>
+          <!-- Ana başlık -->
+          <h1>Eğitmen Eşliğinde<br />Grup Antrenmanları</h1>
+          <br />
+          <!-- Tanıtıcı açıklama -->
+          <p>
+            Ayk Spor Salonu’nda hedeflerine ulaşmak için güçlü bir adım at. Alanında uzman eğitmenlerle grup ya da bireysel derslerle kendini keşfet!
+          </p>
+        </div>
+
+        <!-- Eylem butonları -->
+        <div class="home-buttons">
+          <button class="sign">Kayıt Ol</button>
+          <button class="details">Detaylar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kısa istatistik kutuları -->
+    <div class="flex-container">
+      <div><p>325<br /><span>Kurs</span></p></div>
+      <div><p>405<br /><span>Egzersiz</span></p></div>
+      <div><p>305<br /><span>Çalışma Saati</span></p></div>
+      <div><p>705<br /><span>Mutlu Üye</span></p></div>
+    </div>
+
+    <!-- Dersler bölümü -->
+    <section class="classes" id="classes">
+      <div class="class-container">
+        <div class="bg-shape"></div>
+        <h2>Derslerimiz</h2>
+        <div class="line"></div>
+        <p>İhtiyacına ve seviyene uygun dersler seni bekliyor.</p>
+
+        <!-- Ders filtreleme butonları -->
+        <div class="button-container">
+          <button id="yoga">Yoga</button>
+          <button id="grup">Grup</button>
+          <button id="bireysel">Bireysel</button>
+          <button id="esneme">Esneme</button>
+        </div>
+
+        <!-- Seçilen dersin detayları -->
+        <div id="features-container">
+          <div>
+            <h6>Neden Yoga?</h6>
+            <p>
+              Yoga, beden ve zihin dengesini sağlar. Stresi azaltır, esnekliği ve odaklanmayı artırır.
+            </p>
+            <h6>Yoga Ders Saatleri</h6>
+            <p>Cumartesi-Pazar: 18:00 - 22:00</p>
+            <p>Pazartesi-Salı: 20:00 - 22:00</p>
+            <p>Çarşamba-Cuma: 20:00 - 22:00</p>
+          </div>
+          <img src="./images/yoga.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- BMI hesaplama bölümü -->
+    <div class="bmi-container">
+      <div class="calculate-container">
+        <h1>BMI Hesaplayıcı</h1>
+        <p>
+          Vücut kitle indeksi (BMI), sağlıklı kiloda olup olmadığını anlaman için kolay bir ölçüttür. Kas-kütle dengesini dikkate almak da önemlidir.
+        </p>
+
+        <!-- Boy ve kilo giriş alanları -->
+        <input id="height" type="text" placeholder="Boyunuz" /><span>cm</span>
+        <input id="weight" type="text" placeholder="Kilonuz" /><span>kg</span>
+      </div>
+      <div class="img-container">
+        <h4>BMI Değeriniz</h4>
+        <!-- BMI grafiği resmi -->
+        <img src="./images/bmi-index.jpg" />
+        <div class="triangle"></div>
+      </div>
+    </div>
+
+    <!-- Eğitmenler bölümü -->
+    <section class="trainer" id="trainer">
+      <div class="trainer-container">
+        <h2>Eğitmenlerimiz</h2>
+        <div class="line"></div>
+        <p>Ayk ailesinin uzman eğitmenleri ile tanış!</p>
+
+        <!-- Eğitmen kartları -->
+        <div class="trainers-container">
+          <!-- Her eğitmen için kart -->
+          <div class="trainer-portfolio">
+            <div class="stick"></div>
+            <img src="./images/trainer1.jpg" />
+            <div class="stick-bottom"></div>
+            <div class="trainer-layer">
+              <h4>Zeynep Yılmaz</h4>
+              <p>Pilates Eğitmeni</p>
+            </div>
+          </div>
+
+          <div class="trainer-portfolio">
+            <div class="stick"></div>
+            <img src="./images/trainer2.jpg" />
+            <div class="stick-bottom"></div>
+            <div class="trainer-layer">
+              <h4>Mustafa Güçlü</h4>
+              <p>Fonksiyonel Antrenör</p>
+            </div>
+          </div>
+
+          <div class="trainer-portfolio">
+            <div class="stick"></div>
+            <img src="./images/trainer3.jpg" />
+            <div class="stick-bottom"></div>
+            <div class="trainer-layer">
+              <h4>Asuman Cevheri</h4>
+              <p>Kardiyo Eğitmeni</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ekipman satın alma alanı -->
+    <div class="purchase">
+      <div class="purchase-container">
+        <h2>Ekipman Satın Al</h2>
+        <div class="line"></div>
+        <p>Kaliteli spor ekipmanlarını uygun fiyatlarla Ayk’tan temin edebilirsin.</p>
+
+        <!-- Ürün kartları -->
+        <div class="equipment-container">
+          <!-- Örnek ürün kartı -->
+          <div class="equipment-card">
+            <img src="./images/purchase1.jpg" />
+            <div class="card-layer">
+              <h4>Kettlebell / 5kg</h4>
+              <p><span>89,99$</span>/ 59,99$</p>
+              <p><i class="fa-solid fa-cart-shopping"></i>Sepete Ekle</p>
+            </div>
+          </div>
+          <!-- Diğer ürünler de aynı yapıda eklenebilir -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Üye yorumları bölümü -->
+    <section class="review" id="review">
+      <div class="review-container">
+        <h2>Üye Yorumları</h2>
+        <div class="line"></div>
+        <p>Üyelerimiz Ayk hakkında ne düşünüyor?</p>
+
+        <!-- Üye yorum kartları -->
+        <div class="client-container">
+          <div class="review">
+            <div class="client">
+              <img src="./images/client1.jpg" />
+              <p><span>Beslenme Uzmanı</span><br />CFO</p>
+            </div>
+            <div class="comment">
+              <p>Sporla birlikte hayatım değişti. Ayk ailesine teşekkür ederim!</p>
+            </div>
+          </div>
+          <div class="review">
+            <div class="client">
+              <img src="./images/client2.jpg" />
+              <p><span>Kardiyo Eğitmeni</span><br />CEO</p>
+            </div>
+            <div class="comment">
+              <p>Ayk'ta geçirdiğim her dakika sağlığıma sağlık katıyor!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- İletişim formu bölümü -->
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <h2>Bize Ulaş</h2>
+        <div class="line"></div>
+        <p>Her türlü sorunuz için bize ulaşabilirsiniz.</p>
+
+        <div class="message-container">
+          <div class="phone-container">
+            <h6>Telefon Numarası &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-posta Adresi</h6>
+            <span>+90 530 108 07 80&nbsp;&nbsp;info@ayk.com.tr</span>
+
+            <!-- Randevu alma formu -->
+            <div class="input-container">
+              <h3>Randevu Al</h3>
+              <input type="text" placeholder="Adınız" id="textname" />
+              <input type="email" placeholder="E-posta" id="ymail" />
+              <textarea rows="5" cols="50" name="text" placeholder="Mesajınız"></textarea>
+              <button type="submit" class="send-btn" onclick="showPopup()">Gönder</button>
+
+            </div>
+          </div>
+
+          <!-- Harita alanı -->
+          <div class="googleMap">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.9061086649294!2d38.7815723!3d37.1894609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1534713e29d118b1%3A0x24221fab3d112775!2sAta%C5%9Fehir%20Prestij%20Konutlar%C4%B1!5e0!3m2!1str!2str!4v1711213544412!5m2!1str!2str" 
+              width="100%" 
+              height="350" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Alt bilgi (footer) bölümü -->
+    <footer>
+      <div class="footer">
+        <!-- Logo tekrar -->
+        <div class="logo">
+          <img src="./images/logo.png" alt="Ayk Logo" />
+        </div>
+
+        <!-- Açıklama -->
+        <p>
+          Ayk Spor Salonu, kaliteli hizmeti ve profesyonel ekibiyle sağlıklı bir yaşamın adresi.
+        </p>
+
+        <!-- Bilgi ve bağlantılar -->
+        <div class="footer-container">
+          <div class="info">
+            <h3>Bilgiler</h3>
+            <a href="#">Hakkımızda</a>
+            <a href="#">Dersler</a>
+            <a href="#">Blog</a>
+            <a href="#">İletişim</a>
+          </div>
+          <div class="links">
+            <h3>Faydalı Bağlantılar</h3>
+            <a href="#">Hizmetler</a>
+            <a href="#">Destek</a>
+            <a href="#">Şartlar & Koşullar</a>
+            <a href="#">Gizlilik Politikası</a>
+          </div>
+        </div>
+
+        <!-- Footer imza -->
+        <div style="text-align:center; margin-top:20px; color:#999;">
+          by Aykan Avşar
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS dosyası -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+   
+    <script src="./script.js"></script>
+    <script>
+      function showPopup() {
+        alert("Talebiniz alınmıştır. En kısa sürede sizinle iletişime geçeceğiz.");
+      }
+    </script>
+  </body>
+</html>
