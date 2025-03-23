@@ -1,0 +1,1 @@
+# ayk-spor-salonu
